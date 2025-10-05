@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website 😎</title>
+    <link rel="stylesheet" href="main.css">   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+     <!-- Navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <!-- brand logo -->
+            <a class="navbar-brand bg-warning text-dark px-3 py-2 rounded-circle fw-bold" href="index.html">icon</a>
+
+            <!-- toggle button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- navigation menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+
+                    <!-- Categories dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="categories/privacy_and_policy.html">Privacy and Policy</a></li>
+                            <li><a class="dropdown-item" href="categories/term_and_conditions.html">Term and Conditions</a></li>
+                            <li><a class="dropdown-item" href="categories/delivery_information.html">Delivery Information</a></li>
+                            <li><a class="dropdown-item" href="categories/refund.html">Refund Policy</a></li>
+                            <li><a class="dropdown-item" href="categories/sales_contact.html">Sales Contact</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- All Products dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+                            All Products
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="products/all_products.html">All Products</a></li>
+                            <li><a class="dropdown-item" href="products/automation.html">MT4 Automation Robot Products</a></li>
+                            <li><a class="dropdown-item" href="products/indicators.html">Indicators Products</a></li>
+                            <li><a class="dropdown-item" href="products/forex.html">Forex Market Books Products</a></li>
+                            <li><a class="dropdown-item" href="products/coin_market.html">Coin Market Books Products</a></li>
+                            <li><a class="dropdown-item" href="products/financial_book.html">Financial Books Products</a></li>
+                            <li><a class="dropdown-item" href="products/stock_market.html">Stock Market Books Products</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+
+                <div class="d-flex">
+                    <a href="javascript:void(0);" class="btn btn-pink ms-3">Action</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- hero section 🌟 -->
+    <section class="hero-section">
+        <h1 class="fw-bold">header text header text header text header text</h1>
+        <p>header text header text header text header text header text header text header text header text</p>
+        <div class="mt-4">
+            <button class="btn btn-primary px-4 py-2">Action 1</button>
+            <button class="btn btn-outline-primary px-4 py-2">Action 1</button>
+        </div>
+    </section>
+
+    <section class="image-grid-section">
+        <div class="container my-5">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <img src="your-image1.jpg" alt="Image 1" class="img-fluid grid-item fade-in">
+                </div>
+                <div class="col-md-4">
+                    <img src="your-image2.jpg" alt="Image 2" class="img-fluid grid-item fade-in">
+                </div>
+                <div class="col-md-4">
+                    <img src="your-image3.jpg" alt="Image 3" class="img-fluid grid-item fade-in">
+                </div>
+                <div class="col-md-4">
+                    <img src="your-image4.jpg" alt="Image 4" class="img-fluid grid-item fade-in">
+                </div>
+                <div class="col-md-4">
+                    <img src="your-image5.jpg" alt="Image 5" class="img-fluid grid-item fade-in">
+                </div>
+                <div class="col-md-4">
+                    <img src="your-image6.jpg" alt="Image 6" class="img-fluid grid-item fade-in">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-text-section">
+        <div class="container my-5">
+            <div class="row align-items-center">
+                <!-- Left Side: Image -->
+                <div class="col-md-6">
+                    <img src="your-image.jpg" alt="Image" class="img-fluid bordered-image slide-in-left">
+                </div>
+    
+                <!-- Right Side: Text List -->
+                <div class="col-md-6">
+                    <div class="text-content slide-in-right">
+                        <div class="separator"></div>
+                        <div class="text-item">
+                            <h3 class="fw-bold">header text</h3>
+                            <p>header text header text header text</p>
+                        </div>
+                        <div class="text-item">
+                            <h3 class="fw-bold">header text</h3>
+                            <p>header text header text header text</p>
+                        </div>
+                        <div class="text-item">
+                            <h3 class="fw-bold">header text</h3>
+                            <p>header text header text header text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="stacked-card-section">
+        <div class="container my-5 position-relative">
+            <!-- Background cards -->
+            <div class="background-card bg-purple"></div>
+            <div class="background-card bg-darkpurple"></div>
+    
+            <!-- Main card -->
+            <div class="main-card zoom-in">
+                <h2 class="fw-bold">header text header text header text</h2>
+                <p>header text header text header text header text header
+                    text header text header text header text header text header text</p>
+                    <a href="#" class="btn btn-danger">Action 1</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-image-section">
+            <div class="container my-5">
+                <div class="row align-items-center">
+                    <!-- Left Side: Text List -->
+                    <div class="col-md-6">
+                        <div class="text-content slide-in-left">
+                            <div class="separator"></div>
+                            <div class="text-item">
+                                <h3 class="fw-bold">header text</h3>
+                                <p>header text header text header text</p>
+                            </div>
+                            <div class="text-item">
+                                <h3 class="fw-bold">header text</h3>
+                                <p>header text header text header text</p>
+                            </div>
+                            <div class="text-item">
+                                <h3 class="fw-bold">header text</h3>
+                                <p>header text header text header text</p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Right Side: Image -->
+                    <div class="col-md-6">
+                        <img src="your-image.jpg" alt="Image" class="img-fluid bordered-image slide-in-right">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-toggle-section">
+            <div class="container my-5 text-center fade-in">
+                <p class="small-text">header text header text header text</p>
+                <h2 class="fw-bold">header text</h2>
+                <p class="small-text">header text header text header text header text</p>
+        
+                <!-- Toggle Buttons -->
+                <div class="btn-group toggle-button-group slide-in-up" role="group">
+                    <button type="button" class="btn btn-primary active">Monthly</button>
+                    <button type="button" class="btn btn-outline-primary">Yearly</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-section">
+            <div class="container my-5">
+                <div class="row justify-content-center">
+                    <!-- Pricing Card 1 -->
+                    <div class="col-md-4">
+                        <div class="pricing-card fade-in">
+                            <h5 class="plan-title">Basic plan</h5>
+                            <h2 class="price">$49<span>/month</span></h2>
+                            <p class="yearly-price">or $200 yearly</p>
+                            <ul class="features">
+                                <li>✔ 10GB Storage</li>
+                                <li>✔ Limited Projects</li>
+                                <li>✔ 24/7 Support</li>
+                            </ul>
+                            <button class="btn btn-outline-light action-btn">Action 1</button>
+                        </div>
+                    </div>
+        
+                    <!-- Pricing Card 2 -->
+                    <div class="col-md-4">
+                        <div class="pricing-card fade-in delay-1">
+                            <h5 class="plan-title">Basic plan</h5>
+                            <h2 class="price">$49<span>/month</span></h2>
+                            <p class="yearly-price">or $200 yearly</p>
+                            <ul class="features">
+                                <li>✔ 10GB Storage</li>
+                                <li>✔ Limited Projects</li>
+                                <li>✔ 24/7 Support</li>
+                            </ul>
+                            <button class="btn btn-outline-light action-btn">Action 1</button>
+                        </div>
+                    </div>
+        
+                    <!-- Pricing Card 3 -->
+                    <div class="col-md-4">
+                        <div class="pricing-card fade-in delay-2">
+                            <h5 class="plan-title">Basic plan</h5>
+                            <h2 class="price">$49<span>/month</span></h2>
+                            <p class="yearly-price">or $200 yearly</p>
+                            <ul class="features">
+                                <li>✔ 10GB Storage</li>
+                                <li>✔ Limited Projects</li>
+                                <li>✔ 24/7 Support</li>
+                            </ul>
+                            <button class="btn btn-outline-light action-btn">Action 1</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-card-section">
+            <div class="container my-5">
+                <div class="row align-items-center">
+                    <!-- Left Side: Text & Button -->
+                    <div class="col-md-6">
+                        <div class="text-content fade-in">
+                            <h2 class="fw-bold">header text header text header text</h2>
+                            <p>header text header text header text header text header text header text</p>
+                            <button class="btn btn-warning action-btn">Action 1</button>
+                        </div>
+                    </div>
+        
+                    <!-- Right Side: Stacked Cards -->
+                    <div class="col-md-6">
+                        <div class="card-stack">
+                            <div class="stacked-card slide-in-right rotate-1">header text header</div>
+                            <div class="stacked-card slide-in-right rotate-2 delay-1">header text header</div>
+                            <div class="stacked-card slide-in-right rotate-3 delay-2">header text header</div>
+                            <div class="stacked-card slide-in-right rotate-4 delay-3">header text header</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonial-section">
+            <div class="container my-5 text-center">
+                <!-- Section Header -->
+                <h2 class="fw-bold">header text</h2>
+                <p class="description">header text header text header text header text header text header text</p>
+        
+                <!-- Testimonial Cards -->
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <div class="testimonial-card fade-in delay-1">
+                            <div class="profile">
+                                <div class="avatar"></div>
+                                <div class="profile-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company ABC</span>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                header text header text header text header text header text header text
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <div class="testimonial-card fade-in delay-2">
+                            <div class="profile">
+                                <div class="avatar"></div>
+                                <div class="profile-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company ABC</span>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                header text header text header text header text header text header text
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <div class="testimonial-card fade-in delay-3">
+                            <div class="profile">
+                                <div class="avatar"></div>
+                                <div class="profile-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company ABC</span>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                header text header text header text header text header text header text
+                            </p>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <div class="testimonial-card fade-in delay-4">
+                            <div class="profile">
+                                <div class="avatar"></div>
+                                <div class="profile-info">
+                                    <strong>John Doe</strong>
+                                    <span>CEO, Company ABC</span>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">
+                                header text header text header text header text header text header text
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container my-5 text-center">
+                <!-- Section Header -->
+                <p class="intro-text">Our team is here to help you with any inquiries you may have. Feel free to contact us via email or phone.</p>
+                <h2 class="fw-bold">Contact Us</h2>
+                <p class="sub-text">Have questions or need assistance? Reach out to us!</p>
+        
+                <!-- Contact Info Cards -->
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="contact-card fade-in">
+                            <div class="icon-wrapper">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <h4>Email</h4>
+                            <p class="contact-description">
+                                We aim to provide prompt and helpful support to all our customers.
+                            </p>
+                            <p class="contact-info">info@softwarecompany.com</p>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="contact-card fade-in delay-1">
+                            <div class="icon-wrapper">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <h4>Phone</h4>
+                            <p class="contact-description">
+                                We aim to provide prompt and helpful support to all our customers.
+                            </p>
+                            <p class="contact-info">+90 530 000 00 00</p>
+                        </div>
+                    </div>
+        
+                    <div class="col-md-4">
+                        <div class="contact-card fade-in delay-2">
+                            <div class="icon-wrapper">
+                                <div class="icon-circle"></div>
+                            </div>
+                            <h4>Office</h4>
+                            <p class="contact-description">
+                                We aim to provide prompt and helpful support to all our customers.
+                            </p>
+                            <p class="contact-info">128 XXX Street,<br>Cityville, State, Country</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer class="footer-section">
+            <div class="container my-5 text-center fade-in">
+                <!-- Newsletter Section -->
+                <p class="newsletter-text">
+                    Subscribe to our newsletter for the latest updates on new features and products release.
+                </p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-light">Action 1</button>
+                    <button class="btn btn-outline-primary">Action 1</button>
+                </div>
+                <p class="small-text">header text header text header text</p>
+            </div>
+        
+            <div class="container mt-5">
+                <div class="row">
+                    <!-- Company -->
+                    <div class="col-md-4">
+                        <h5>Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Resources -->
+                    <div class="col-md-4">
+                        <h5>Resources</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Community Forum</a></li>
+                            <li><a href="#">Download Now</a></li>
+                            <li><a href="#">Buy Now</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Follow Us -->
+                    <div class="col-md-4">
+                        <h5>Follow Us</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <hr>
+        
+            <!-- Copyright Section -->
+            <div class="container text-center small-text">
+                &copy; 2022 Software Sales, All rights reserved.
+                <span class="footer-policy-links">
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Term of Service</a> | 
+                    <a href="#">Cookie Policy</a>
+                </span>
+            </div>
+        </footer>
+    
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+    <script>
+       $(document).ready(function() {
+    function onScrollHandler() {
+        $('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .zoom-in').each(function() {
+            let elementTop = $(this).offset().top;
+            let windowBottom = $(window).scrollTop() + $(window).height();
+            if (elementTop < windowBottom - 50) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    onScrollHandler();
+
+    // event for scrolling
+    $(window).on('scroll', function() {
+        onScrollHandler();
+    });
+
+    $('.toggle-button-group .btn').on('click', function () {
+        $('.toggle-button-group .btn').removeClass('active');
+        $(this).addClass('active');
+    });
+    });
+
+    $(document).ready(function(){
+        $('.dropdown').hover(
+            function() { $(this).find('.dropdown-menu').stop(true, true).fadeIn(200); },
+            function() { $(this).find('.dropdown-menu').stop(true, true).fadeOut(200); }
+        );
+    });
+
+
+    </script>
+
+</body>
+</html>

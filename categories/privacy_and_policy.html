@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Website 😎</title>
+    <link rel="stylesheet" href="main.css">   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #0d0d1f;
+            color: white;
+            text-align: center;
+        }
+        .navbar-brand {
+            background-color: yellow;
+            color: black;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .nav-link {
+            color: white;
+        }
+        .hero-section {
+            padding: 100px 20px;
+        }
+        .btn-primary {
+            background: linear-gradient(45deg, purple, violet);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(45deg, violet, purple);
+            transform: scale(1.05);
+        }
+
+        .btn-primary:active {
+            transform: scale(0.95);
+        }
+
+        .btn-outline-primary {
+            border-color: violet;
+            color: white;
+        }
+               /* Grid item styling */
+        .grid-item {
+            background-color: #e0e0e0;
+            width: 100%;
+            height: 400px;
+            display: block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Hover effect */
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        /* Fade-in animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Image Styling */
+        .bordered-image {
+            border: 3px solid #e0e0e0;
+            display: block;
+            width: 100%;
+            height: 250px;
+        }
+
+        /* Text Content */
+        .text-content {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        /* Vertical Separator */
+        .separator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background-color: white;
+        }
+
+        /* Slide-in Animation */
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .slide-in-left.visible, .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+         /* Section styling */
+    .stacked-card-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60vh;
+        position: relative;
+    }
+
+    .container {
+        position: relative;
+        width: 80%;
+        max-width: 900px;
+    }
+
+    /* Background cards */
+    .background-card {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        transform: rotate(-3deg);
+        opacity: 0.8;
+    }
+
+    .bg-purple {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        top: 10px;
+        left: 10px;
+    }
+
+    .bg-darkpurple {
+        background: linear-gradient(135deg, #3a0ca3, #7209b7);
+        top: 20px;
+        left: 20px;
+        transform: rotate(-6deg);
+    }
+
+    /* Main card */
+    .main-card {
+        position: relative;
+        background: linear-gradient(135deg, #4cc9f0, #4361ee);
+        padding: 40px;
+        border-radius: 10px;
+        color: white;
+        text-align: left;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transform: scale(0.8);
+        opacity: 0;
+        transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    }
+
+    /* Zoom-in animation */
+    .zoom-in.visible {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+     /* Text Styling */
+     .small-text {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-top: 20px;
+    }
+
+    /* Toggle Button Group */
+    .toggle-button-group {
+        margin-top: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .toggle-button-group .btn {
+        width: 120px;
+        height: 50px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .toggle-button-group .btn.active {
+        background: linear-gradient(135deg, #7b2cbf, #3c096c);
+        color: white;
+        border: none;
+    }
+
+    .toggle-button-group .btn-outline-primary {
+        border: 2px solid #7b2cbf;
+        color: white;
+    }
+
+
+    /* Slide-in Up Animation */
+    .slide-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .slide-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Pricing Card Styling */
+    .pricing-card {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        text-align: center;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    /* Hover Effect */
+    .pricing-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    .plan-title {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .price {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .price span {
+        font-size: 18px;
+        opacity: 0.8;
+    }
+
+    .yearly-price {
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .features {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .features li {
+        font-size: 16px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 10px;
+    }
+
+    /* Button Styling */
+    .action-btn {
+        width: 100%;
+        border-radius: 8px;
+        padding: 10px;
+        font-weight: bold;
+    }
+
+    /* Delayed Animations */
+    .delay-1 {
+        transition-delay: 0.3s;
+    }
+
+    .delay-2 {
+        transition-delay: 0.6s;
+    }
+
+    .delay-3 {
+        transition-delay: 0.9s;
+    }
+
+    .delay-4 {
+        transition-delay: 0.8s;
+    }
+
+    .action-btn {
+        margin-top: 15px;
+        font-weight: bold;
+    }
+
+    /* Right Side: Card Stack */
+    .card-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stacked-card {
+        background: linear-gradient(135deg, #4cc9f0, #4361ee);
+        color: white;
+        padding: 20px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: left;
+        border-radius: 8px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        transform-origin: center;
+    }
+
+    /* Different Rotations */
+    .rotate-1 { transform: rotate(5deg); }
+    .rotate-2 { transform: rotate(-3deg); }
+    .rotate-3 { transform: rotate(3deg); }
+    .rotate-4 { transform: rotate(-5deg);
+    }
+
+     /* Section Styling */
+     .description {
+        font-size: 16px;
+        opacity: 0.8;
+    }
+
+    /* Testimonial Card */
+    .testimonial-card {
+        background: linear-gradient(135deg, rgba(50, 50, 100, 0.8), rgba(10, 10, 50, 0.9));
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        text-align: left;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .testimonial-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Profile Styling */
+    .profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-info strong {
+        font-size: 16px;
+    }
+
+    .profile-info span {
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+      /* Section Header */
+      .intro-text, .sub-text {
+        font-size: 16px;
+        opacity: 0.8;
+    }
+
+    /* Contact Card */
+    .contact-card {
+        background: transparent;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-card:hover {
+        transform: scale(1.05);
+    }
+
+    /* Icon Styling */
+    .icon-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    /* Contact Details */
+    .contact-description {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-bottom: 5px;
+    }
+
+    .contact-info {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+      /* Footer Styling */
+      .footer-section {
+        background: #0d0d1f;
+        padding: 40px 0;
+        color: white;
+    }
+
+    .newsletter-text {
+        font-size: 16px;
+        opacity: 0.8;
+        margin-bottom: 15px;
+    }
+
+    .btn-group .btn {
+        margin: 5px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .btn-outline-light:hover {
+        background: white;
+        color: black;
+    }
+
+    .btn-outline-primary:hover {
+        background: #7b2cbf;
+        color: white;
+    }
+
+    /* Footer Links */
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-links a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .footer-links a:hover {
+        opacity: 1;
+    }
+
+    .footer-policy-links a {
+        color: white;
+        text-decoration: none;
+        margin: 0 5px;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .footer-policy-links a:hover {
+        opacity: 1;
+    }
+
+
+    .privacy-policy-section {
+   
+    color: white;
+    padding: 60px 0;
+    }
+
+    .policy-title {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        border-bottom: 2px solid white;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    .policy-content {
+        max-width: 800px;
+        margin: auto;
+        text-align: left;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .policy-content.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .policy-subtitle {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        border-bottom: 1px solid white;
+        padding-bottom: 5px;
+    }
+
+    .about-section {
+    padding: 50px 20px;
+    color: white;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 100px; /* 画像サイズ調整 */
+    height: auto;
+    background-color: #ccc; /* 背景のグレー */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.about-text {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.btn-pink {
+    background: linear-gradient(45deg, #ff4b4b, #d60000);
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.btn-pink:hover {
+    background: linear-gradient(45deg, #d60000, #ff4b4b);
+    transform: scale(1.05);
+}
+
+.btn-pink {
+    background: linear-gradient(45deg, #ff4b4b, #d60000);
+    color: white;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+.btn-pink:hover {
+    background: linear-gradient(45deg, #d60000, #ff4b4b);
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+
+   <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <!-- brand logo -->
+        <a class="navbar-brand bg-warning text-dark px-3 py-2 rounded-circle fw-bold" href="../index.html">icon</a>
+
+        <!-- toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- navigation menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="../about.html">About Us</a></li>
+
+                <!-- Categories dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown">
+                        Categories
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="privacy_and_policy.html">Privacy and Policy</a></li>
+                        <li><a class="dropdown-item" href="term_and_conditions.html">Term and Conditions</a></li>
+                        <li><a class="dropdown-item" href="delivery_information.html">Delivery Information</a></li>
+                        <li><a class="dropdown-item" href="refund.html">Refund Policy</a></li>
+                        <li><a class="dropdown-item" href="sales_contact.html">Sales Contact</a></li>
+                    </ul>
+                </li>
+
+                <!-- All Products dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="productsDropdown" role="button" data-bs-toggle="dropdown">
+                        All Products
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="../products/all_products.html">All Products</a></li>
+                        <li><a class="dropdown-item" href="../products/automation.html">MT4 Automation Robot Products</a></li>
+                        <li><a class="dropdown-item" href="../products/indicators.html">Indicators Products</a></li>
+                        <li><a class="dropdown-item" href="../products/forex.html">Forex Market Books Products</a></li>
+                        <li><a class="dropdown-item" href="../products/coin_market.html">Coin Market Books Products</a></li>
+                        <li><a class="dropdown-item" href="../products/financial_book.html">Financial Books Products</a></li>
+                        <li><a class="dropdown-item" href="../products/stock_market.html">Stock Market Books Products</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+            </ul>
+
+           <!-- action button -->
+            <div class="d-flex">
+                <a href="javascript:void(0);" class="btn btn-pink me-3">Action</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+    <!-- hero section 🌟 -->
+    <section class="hero-section">
+        <h1 class="fw-bold">Privacy and Data Protection Policy</h1>
+        <p>header text header text header text header text header text header text header text header text</p>
+        <div class="mt-4">
+            <button class="btn btn-primary px-4 py-2">Action 1</button>
+            <button class="btn btn-outline-primary px-4 py-2">Action 1</button>
+        </div>
+    </section>
+
+    <section class="privacy-policy-section">
+        <div class="container">
+            <h2 class="policy-title">Privacy and Data Protection Policy</h2>
+            <div class="policy-content fade-in">
+                <h3 class="policy-subtitle">Privacy and Data Protection Policy</h3>
+                <p>This Privacy and data protection policy (hereinafter – Privacy Policy, Policy) sets out the basis of your personal data processing.
+                    Please, read the following information carefully to understand the views and practices of Green Lake (hereinafter – we, Green Lake) regarding your personal data and how we treat it. By using our website (www.grlbooks.com) (hereinafter - Website), you are agreeing to be bound by this Policy.</p>
+    
+                <h3 class="policy-subtitle">Privacy</h3>
+                <p>We understand your concerns about how we deal with your personal data...</p>
+    
+                <h3 class="policy-subtitle">Purpose of the personal data processing</h3>
+                <p>We are required to maintain certain personal data about individuals for the purposes of satisfying our operational and legal obligations. We recognize the importance of correct and lawful treatment of personal data as it helps to maintain our company’s confidence, to ensure efficient and successful outcomes of using such data.
+
+                    We only use your personal data as appropriate to provide you with a high quality of service and security. For example, we may use personal data collected from you to verify your identity and contact information. This information helps us to improve our services and inform you about new products, services or promotions that may be of interest to you.
+                    
+                    Personal data may consist of data kept on paper, computer or other electronic media, all of which is protected under the applicable personal data protection laws.
+                    
+                    Principles of personal data processing
+                    
+                    All personal data is:
+                    
+                    fairly and lawfully processed;
+                    processed for a specified purpose;
+                    adequate, relevant, and not excessive;
+                    not kept for longer than necessary;
+                    accurate;
+                    processed in accordance with the individual’s (data subject’s) rights;
+                    secured;
+                    not transferred to other countries without adequate protection.
+                    </p>
+    
+                <h3 class="policy-subtitle">Personal data we collect</h3>
+                <p>We may collect and process the following personal data of you:
+
+                    information that you provide by filling in forms on our Website, in emails, by calls;<br>
+                    up-to-date data about yourself, if you register your personal details for our service;<br>
+                    details of your visits to our Website (including, but not limited to, traffic data, location data, weblogs, and other communication data, and the resources that you access). <br>
+                    The types of personal data that we may process, for instance, include information about current, past and prospective clients and customers, Website visitors, etc. with whom we deal. This information includes information required to communicate with you, including but not limited to your name, mailing address, telephone number, email address, birth date and your location information. <br>
+                    
+                    We may also ask you for information when you report a problem with the Website. If you contact us, we may keep a record of that correspondence. We may also ask you to complete surveys that we use for research purposes, although you do not have to respond to them. <br>
+                    
+                    You have a choice when you are asked to provide personal data. You may agree or refuse to provide us with your personal data. You also entitled to make Green Lake erase your personal data, cease further dissemination of your personal data and potentially have third parties halt processing of the data. The withdrawal of consent does not affect the lawfulness of processing based on consent before its withdrawal. However, if you choose not to provide us with your personal data necessary for our services provision or to withdraw the data that is still relevant to original purposes of processing, you may not be able to use our service. <br>
+                    
+                    The personal data we collect depends on the context of your interactions with Green Lake , the choices you make, including your privacy settings, and the service you use.</p>
+    
+                <h3 class="policy-subtitle">Use of cookies</h3>
+                <p>We use cookies to enhance the performance of our Website (Cookies are small text files sent from the Web server to your computer.) Cookies used by us do not contain any personal data, nor do they contain account or password information. They merely allow the Website to recognize that a page request comes from someone who has already logged on.
+
+                    We may share information about visitors of the Website with reputable advertising companies for targeting our Internet banner advertisements on this site and other sites. For this purpose, pixel tags (also called clear gifs or web beacons) may be used to note the pages you visit. The information collected by the advertising company through the use of these pixel tags is not personally identifiable.
+                    
+                    To administer and improve our Website, we may use a third party to track and analyze usage and statistical volume information including page requests, form requests, and click paths. The third party may use cookies to track behavior and may set cookies on our behalf. These cookies do not contain any personally identifiable information.</p>
+    
+                <h3 class="policy-subtitle">Retention of your personal data</h3>
+                <p>We share your personal data with your consent or as necessary to provide any service you have requested. We also share your personal data with Green Lake affiliates and subsidiaries, with vendors and service providers providing software, IT, and other services in order to provide our services to you. We share your personal data with a third person and authorities if this is required by law, in response to legal process, to protect our clients, to maintain the security of our services, and to protect the rights or property of Green Lake.
+
+                    To improve our user experience, we may transfer the personal data of our current and (or) potential customers solely for the purpose of its processing and our services provision.</p>
+    
+                <h3 class="policy-subtitle">Contact Information</h3>
+                <p>We may share information with affiliates and partners if the information is required to provide the product or service you have requested or to provide you with the opportunity to participate in the products or services our affiliates offer. We may also forge partnerships and alliances, which may include joint marketing agreements, with other companies who offer high-quality products and services that might be of value to our customers. In order to ensure that these products and services meet your needs and are delivered in a manner that is useful and relevant, we may share some information with partners, affiliates, and alliances. This allows them to understand better the offers that are most relevant and useful to you. The use of your personal data is limited to the purposes identified in our relationship with the partner or affiliate.</p>
+            
+                <h3 class="policy-subtitle">Non-affiliated third parties</h3>
+                <p>We do not sell, license, lease or otherwise disclose your personal data to any third party for any reason, except as described below.
+
+                    We reserve the right to disclose your personal data to third parties when required to do so by law to regulatory, law enforcement, or other government authorities. We may also disclose your personal data as necessary to credit reporting or collection agencies. We may also disclose your personal data to non-affiliated third parties if it is necessary to protect the Green Lake rights or property.
+                    
+                    To help us improve our services to you, we may engage another business to help us to carry out certain internal functions such as account processing, fulfilment, client service, client satisfaction surveys, or other data collection activities relevant to our business. We may also provide a party with customer’s information from our database to help us to analyse and identify customer’s needs and notify customers of product and service offerings. Use of the shared information is strictly limited to the performance of the task we request and for no other purpose. All third parties with which we share personal data are required to protect personal data in a manner similar to the way we protect personal data. We use a variety of legal mechanisms, including contracts, to help ensure your rights and protections.</p>
+            
+                <h3 class="policy-subtitle">Security of your personal data</h3>
+                <p>We maintain strict security standards and procedures with a view to preventing unauthorized access to your personal data by anyone, including our staff. We use leading technologies to secure your personal data: hardware and software facilities. The hardware protection includes Cisco security products. The software protection tools include strict control mechanisms as follows: SSL 3, TLS 1.2 with keys equal or larger than 2048-bit. All Green Lake members, all our staff, and third parties whenever we hire them to provide support services, are required to observe our privacy standards and to allow us to audit them for compliance.</p>
+
+                <h3 class="policy-subtitle">Where your personal data is stored and processed</h3>
+                <p>Personal data collected by Green Lake may be stored and processed in your region or in any other country where Green Lake or its affiliates, subsidiaries, or service providers maintain facilities. Typically, the primary storage location is the Republic of Belarus, with a backup to the data centers in other regions, including European Union. The storage location(s) are chosen in order to operate efficiently, improve performance, and create redundancies in order to protect the data in the event of an outage or other problem. We take steps to ensure that the data we collect under this Privacy Policy is processed according to the provisions of this Privacy Policy and the requirements of applicable law wherever the data is located.
+
+                    We transfer your personal data from the European Economic Area to other countries, some of which have not been determined by the European Commission to have an adequate level of data protection. When we do, we use a variety of legal mechanisms, including contracts, to help ensure your rights and the protection of your personal data.
+                    </p>
+
+                <h3 class="policy-subtitle">Retention of your personal data</h3>
+                <p>Green Lake retains your personal data for as long as necessary to provide the services, or for other essential purposes such as complying with our legal obligations, resolving disputes, and enforcing our agreements. Because these needs can vary for different data types in the context of different products, actual retention periods can vary significantly. The criteria used to determine the retention periods include, for instance.
+
+                    the period of your personal data processing needed to provide the services. This includes such things as maintaining and improving the performance of those services, keeping our systems secure, and maintaining appropriate business and financial records. It is a general rule that establishes the baseline for most data retention periods.
+                    the personal data subject's consent for a longer retention period. If so, we shall retain your personal data in accordance with the consent.
+                    Green Lake is subject to a legal, contractual, or similar obligation to retain your personal data. Mandatory personal data retention laws can be applied in the applicable jurisdiction, government orders to preserve data relevant to an investigation, or personal data that must be retained for the purposes of litigation.</p>
+
+                <h3 class="policy-subtitle">Changes to this Privacy Policy</h3>
+                <p>From time to time, we may update this Privacy Policy. In case we change this Privacy Policy materially, the revised Privacy Policy will be posted promptly on our Website as well as and a notice on our Website informing about such changes. You agree to accept the posting of a revised Privacy Policy electronically on the Website as actual notice to you. Any dispute over our Privacy Policy is subject to this notice, our Customer Agreement. We encourage you to check back periodically and review this Policy so that you will always know what personal data we collect, how we use it, and to whom we disclose it. If you have any questions that this statement does not address, please contact us via our contact form.</p>
+
+                <h3 class="policy-subtitle">Contact information</h3>
+                <p>If you have any privacy concern, complaint or a question, please, send an email to [info@grlbooks.com]. We respond to questions and concerns within 30 days.
+
+                    Unless otherwise stated, Green Lake is a data controller for personal data we collect through the services subject to this statement.
+                    </p>
+            
+                </div>
+        </div>
+    </section>
+
+    <section class="about-section text-center">
+        <div class="container">
+            <div class="image-container fade-in">
+                <img src="your-image.jpg" alt="Company Logo" class="about-image">
+            </div>
+            <p class="about-text fade-in">
+                GRL Books & Indicators assembles and sells e-books that give you a broad knowledge 
+                of the stock market, coin market, and forex world. All of the products offered for sale 
+                on our site are e-books written for education in the relevant categories. It has nothing 
+                to do with Bitcoin or blockchain technology, there is no sale in this industry.
+            </p>
+        </div>
+    </section>
+    
+    
+    
+    
+
+        <footer class="footer-section">
+            <div class="container my-5 text-center fade-in">
+                <!-- Newsletter Section -->
+                <p class="newsletter-text">
+                    Subscribe to our newsletter for the latest updates on new features and products release.
+                </p>
+                <div class="btn-group">
+                    <button class="btn btn-outline-light">Action 1</button>
+                    <button class="btn btn-outline-primary">Action 1</button>
+                </div>
+                <p class="small-text">header text header text header text</p>
+            </div>
+        
+            <div class="container mt-5">
+                <div class="row">
+                    <!-- Company -->
+                    <div class="col-md-4">
+                        <h5>Company</h5>
+                        <ul class="footer-links">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="faq.html">FAQs</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Resources -->
+                    <div class="col-md-4">
+                        <h5>Resources</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Tutorials</a></li>
+                            <li><a href="#">Community Forum</a></li>
+                            <li><a href="#">Download Now</a></li>
+                            <li><a href="#">Buy Now</a></li>
+                        </ul>
+                    </div>
+        
+                    <!-- Follow Us -->
+                    <div class="col-md-4">
+                        <h5>Follow Us</h5>
+                        <ul class="footer-links">
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        
+            <hr>
+        
+            <!-- Copyright Section -->
+            <div class="container text-center small-text">
+                &copy; 2022 Software Sales, All rights reserved.
+                <span class="footer-policy-links">
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Term of Service</a> | 
+                    <a href="#">Cookie Policy</a>
+                </span>
+            </div>
+        </footer>
+    
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+    <script>
+       $(document).ready(function() {
+    function onScrollHandler() {
+        $('.fade-in, .slide-in-left, .slide-in-right, .slide-in-up, .zoom-in').each(function() {
+            let elementTop = $(this).offset().top;
+            let windowBottom = $(window).scrollTop() + $(window).height();
+            if (elementTop < windowBottom - 50) {
+                $(this).addClass('visible');
+            }
+        });
+    }
+
+    onScrollHandler();
+
+    // event for scrolling
+    $(window).on('scroll', function() {
+        onScrollHandler();
+    });
+
+    $('.toggle-button-group .btn').on('click', function () {
+        $('.toggle-button-group .btn').removeClass('active');
+        $(this).addClass('active');
+    });
+    });
+
+    $(document).ready(function() {
+        function onScrollHandler() {
+            $('.fade-in').each(function() {
+                let elementTop = $(this).offset().top;
+                let windowBottom = $(window).scrollTop() + $(window).height();
+                if (elementTop < windowBottom - 50) {
+                    $(this).addClass('visible');
+                }
+            });
+        }
+
+        onScrollHandler(); // 初回ロード時にアニメーション適用
+
+        $(window).on('scroll', function() {
+            onScrollHandler();
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>
